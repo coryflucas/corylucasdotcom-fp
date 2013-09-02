@@ -5,7 +5,7 @@ date: 2013-09-02 5:30 PM
 After creating [French Press](https://github.com/coryflucas/french-press) and migrating my site to Node.js, I realized I needed to setup Node on my actual web server.  Here's some info on what steps were involved.
 
 ## Setting up an HTTP proxy
-I set up a HTTP proxy so that I could run node on a non-privledged port, but still access it via port 80.  This also would allow me to run multiple instances of node in the future if I needed to for some reason and have basic load balancing. I chose to use (Nginx)[http://wiki.nginx.org/] as my proxy.  As I am running Ubuntu, installation is dead simple:
+I set up a HTTP proxy so that I could run node on a non-privileged port, but still access it via port 80.  This also would allow me to run multiple instances of node in the future if I needed to for some reason and have basic load balancing. I chose to use (Nginx)[http://wiki.nginx.org/] as my proxy.  As I am running Ubuntu, installation is dead simple:
 
 	$ sudo apt-get install nginx
 
@@ -32,7 +32,7 @@ Now we need to configure the Nginx to proxy our requests.  Create a new file in 
 	}
 
 ## Create a start up script
-I want to make sure that starting and stoping the Node app is as simple as possible, so I needed to create a start up script.  Service startup and shutdown is handled via upstart on Ubuntu these days, so I created the following upstart script in /etc/init/:
+I want to make sure that starting and stopping the Node app is as simple as possible, so I needed to create a start up script.  Service startup and shutdown is handled via upstart on Ubuntu these days, so I created the following upstart script in /etc/init/:
 
 	#!upstart
 	description "My Node.js app"
@@ -63,7 +63,7 @@ With the script in place, starting the Node app is as simple as
 	service start [YOUR_SERVICE_NAME]
 	
 ## Setup Monit
-My app is currently pretty simple, but I don't want an unhandled exception to take the site down so I set up [Monit](http://mmonit.com/monit/) to make sure Node keeps running.  Instalation is simple:
+My app is currently pretty simple, but I don't want an unhandled exception to take the site down so I set up [Monit](http://mmonit.com/monit/) to make sure Node keeps running.  Installation is simple:
 
 	$ sudo apt-get install monit
 
