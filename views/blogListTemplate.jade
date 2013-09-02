@@ -1,0 +1,15 @@
+extends layout
+
+append head
+  - var title = 'Posts'
+
+append bodyStart
+  - var activeSection = 'blog'
+
+block content
+  ul
+    each post in posts
+      li.post
+        h1
+          a(href='./' + post.link)= post.title
+        = post.date

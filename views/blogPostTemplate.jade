@@ -1,0 +1,30 @@
+extends layout
+
+append head
+  - var title = attributes.title
+
+append bodyStart
+  - var activeSection = 'blog'
+
+block content
+  h1= attributes.title
+  p.date= attributes.date
+  div
+    !{body}
+
+  ul.pagination
+    li
+      if previous
+        a(href=previous.attributes.link, title=previous.attributes.title)
+          i.icon-chevron-left  Previous
+      else
+        span No Older Posts
+    li
+      a(href='./')
+        i.icon-list-ul  List
+    li
+      if next
+        a(href=next.attributes.link, title=next.attributes.title)
+          i.icon-chevron-right  Next
+      else
+        span No Newer Posts
