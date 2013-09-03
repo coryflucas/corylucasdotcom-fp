@@ -6,6 +6,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var fp = require('french-press');
+var gitTrigger = require('./lib/git-trigger');
 
 var app = express();
 
@@ -22,6 +23,11 @@ app.use('/blog/', fp.blog(
         postsDir: __dirname + '/posts',
         listTemplate: 'blogListTemplate',
         postTemplate: 'blogPostTemplate'
+    }));
+app.use('/git-wh', gitTrigger.hook(
+    {
+        repoDir: __dirname + '/.git',
+        key: 'nohonorwithoutpie'
     }));
 app.use(express.static(path.join(__dirname, 'public')));
 
