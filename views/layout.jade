@@ -25,11 +25,17 @@ html
         div(class=['collapse', 'navbar-collapse', 'navbar-ex1-collapse'])
           ul(class=['nav', 'navbar-nav', 'navbar-right'])
             li(class=(activeSection=='about')?'active':'')
-              a(href='/index.html') About
+              a(href='/index.html')
+                i(class=['icon-fixed-width', 'icon-male'])
+                span About
             li(class=(activeSection=='blog')?'active':'')
-              a(href='/blog/') Blog
+              a(href='/blog/')
+                i(class=['icon-fixed-width', 'icon-book'])
+                span Blog
             li(class=(activeSection=='resume')?'active':'')
-              a(href='/resume.html') R&eacute;sum&eacute;
+              a(href='/resume.html')
+                i(class=['icon-fixed-width', 'icon-file-text'])
+                span R&eacute;sum&eacute;
       block content
 
       hr
