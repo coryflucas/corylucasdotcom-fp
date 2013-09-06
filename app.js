@@ -26,7 +26,7 @@ app.use('/blog/', fp.blog(
     }));
 app.use('/git-wh', gitTrigger.hook(
     {
-        repoDir: __dirname + '/.git',
+        repoDir: __dirname,
         key: process.env.GIT_KEY || 'test_key'
     }));
 app.use(express.static(path.join(__dirname, 'public')));
