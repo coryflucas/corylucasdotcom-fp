@@ -12,35 +12,35 @@ html
     link(rel='stylesheet', href='/stylesheets/highlight.css')
   body
     block bodyStart
-    div.container
-      nav(class=['navbar', 'navbar-default'], role='navigation')
-        div.navbar-header
-          button(type='button', class='navbar-toggle', data-toggle='collapse', data-target='.navbar-ex1-collapse')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='/')
-            strong Cory Lucas DOT Com
-        div(class=['collapse', 'navbar-collapse', 'navbar-ex1-collapse'])
-          ul(class=['nav', 'navbar-nav', 'navbar-right'])
-            li(class=(activeSection=='about')?'active':'')
-              a(href='/index.html')
-                i(class=['fa', 'fa-fw', 'fa-male'])
-                span About
-            li(class=(activeSection=='blog')?'active':'')
-              a(href='/blog/')
-                i(class=['fa', 'fa-fw', 'fa-book'])
-                span Blog
-            li(class=(activeSection=='resume')?'active':'')
-              a(href='/resume.html')
-                i(class=['fa', 'fa-fw', 'fa-file-text'])
-                span R&eacute;sum&eacute;
-      block content
+    div#wrap
+      div.container
+        nav(class=['navbar', 'navbar-default'], role='navigation')
+          div.navbar-header
+            button(type='button', class='navbar-toggle', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='/')
+              strong Cory Lucas DOT Com
+          div(class=['collapse', 'navbar-collapse', 'navbar-ex1-collapse'])
+            ul(class=['nav', 'navbar-nav', 'navbar-right'])
+              li(class=(activeSection=='about')?'active':'')
+                a(href='/index.html')
+                  i(class=['fa', 'fa-fw', 'fa-male'])
+                  span About
+              li(class=(activeSection=='blog')?'active':'')
+                a(href='/blog/')
+                  i(class=['fa', 'fa-fw', 'fa-book'])
+                  span Blog
+              li(class=(activeSection=='resume')?'active':'')
+                a(href='/resume.html')
+                  i(class=['fa', 'fa-fw', 'fa-file-text'])
+                  span R&eacute;sum&eacute;
+        block content
 
-      hr
-      footer
-        p &copy; Cory Lucas 2013
+    footer
+      !='&copy; Cory Lucas 2013'
 
     script(type='text/javascript', src='/javascripts/jquery-1.10.2.min.js')
     script(type='text/javascript', src='/javascripts/bootstrap.min.js')
