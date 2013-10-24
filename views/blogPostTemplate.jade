@@ -16,15 +16,18 @@ block content
     li
       if previous
         a(href=previous.attributes.link, title=previous.attributes.title)
-          i.icon-chevron-left  Previous
+          i(class=['fa', 'fa-fw', 'fa-angle-double-left'])
+          =' Previous'
       else
         span No Older Posts
     li
       a(href='./')
-        i.icon-list-ul  List
+        i(class=['fa', 'fa-fw', 'fa-list-ul'])
+        =' List'
     li
       if next
         a(href=next.attributes.link, title=next.attributes.title)
-          i.icon-chevron-right  Next
+          i(class=['fa', 'fa-fw', 'fa-angle-double-right'])
+          =' Next'
       else
         span No Newer Posts

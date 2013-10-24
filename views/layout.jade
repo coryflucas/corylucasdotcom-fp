@@ -26,15 +26,15 @@ html
           ul(class=['nav', 'navbar-nav', 'navbar-right'])
             li(class=(activeSection=='about')?'active':'')
               a(href='/index.html')
-                i(class=['icon-fixed-width', 'icon-male'])
+                i(class=['fa', 'fa-fw', 'fa-male'])
                 span About
             li(class=(activeSection=='blog')?'active':'')
               a(href='/blog/')
-                i(class=['icon-fixed-width', 'icon-book'])
+                i(class=['fa', 'fa-fw', 'fa-book'])
                 span Blog
             li(class=(activeSection=='resume')?'active':'')
               a(href='/resume.html')
-                i(class=['icon-fixed-width', 'icon-file-text'])
+                i(class=['fa', 'fa-fw', 'fa-file-text'])
                 span R&eacute;sum&eacute;
       block content
 
