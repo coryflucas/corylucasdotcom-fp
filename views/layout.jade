@@ -9,12 +9,13 @@ html
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     //if lt IE 8
       link(rel='stylesheet', href='/stylesheets/font-awesome-ie7.min.css')
+      link(rel='stylesheet', href='/stylesheets/bootstrap-ie7.css')
     link(rel='stylesheet', href='/stylesheets/highlight.css')
   body
     block bodyStart
     div#wrap
       div.container
-        nav(class=['navbar', 'navbar-default'], role='navigation')
+        div(class=['navbar', 'navbar-default'], role='navigation')
           div.navbar-header
             button(type='button', class='navbar-toggle', data-toggle='collapse', data-target='.navbar-ex1-collapse')
               span.sr-only Toggle navigation
@@ -39,7 +40,7 @@ html
                   span R&eacute;sum&eacute;
         block content
 
-    footer
+    div.footer
       !='&copy; Cory Lucas 2013'
 
     script(type='text/javascript', src='/javascripts/jquery-1.10.2.min.js')

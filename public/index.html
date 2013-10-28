@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="stylesheets/font-awesome-ie7.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap-ie7.css">
     <![endif]-->
 
     <style>
@@ -20,7 +21,7 @@
 
 <div id="wrap">
     <div class="container">
-        <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -46,7 +47,7 @@
                     </a></li>
                 </ul>
             </div>
-        </nav>
+        </div>
 
         <div class="about">
             <div class="grid">
@@ -54,20 +55,14 @@
                     <div class="col-md-3 col-sm-6 col-xs-12" style="text-align: center;">
                         <img src="images/avatar.png"/>
                     </div>
-                    <div class="col-md-9 col-sm-6 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-12">
-                                I'm a software engineer in the Atlanta, GA area specializing in <strong>C#</strong> and
-                                <strong>Java</strong> enterprise applications.
-                            </div>
-                        </div>
-                        <br/>
+                    <div class="col-md-9 col-sm-6 col-xs-12" style="text-align: center">
+                        <p>
+                            I'm a software engineer in the Atlanta, GA area specializing in <strong>C#</strong> and
+                            <strong>Java</strong> enterprise applications.
+                        </p>
+                        <h3>Want to get in touch or learn more?</h3>
 
-                        <div class="row" style="text-align: center">
-                            <div class="col-md-12">
-                                <h3>Want to get in touch or learn more?</h3></div>
-                        </div>
-                        <div class="row" style="text-align: center">
+                        <div class="row">
                             <div class="col-md-6">
                                 Send me an <i class="fa fa-envelope"></i> <a href="mailto:cory@corylucas.com">Email</a>.
                             </div>
@@ -84,16 +79,19 @@
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 
-<footer>
+<div class="footer">
     &copy; Cory Lucas 2013
-</footer>
+</div>
 
 <script src="javascripts/jquery-1.10.2.min.js"></script>
 <script src="javascripts/bootstrap.min.js"></script>
