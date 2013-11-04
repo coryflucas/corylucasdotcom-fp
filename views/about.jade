@@ -1,0 +1,32 @@
+extends layouts/base
+
+append bodyStart
+    - var activeSection = 'about'
+
+block content
+  div.about
+    div.grid
+      div.row
+        div(class=['col-md-3', 'col-sm-6', 'col-xs-12'])
+          img(src='images/avatar.png')
+        div(class=['col-md-9', 'col-sm-6', 'col-xs-12'])
+          p
+            | I'm a software engineer in the Atlanta, GA area specializing in <strong>C#</strong> and <strong>Java</strong> enterprise applications.
+          h2 Want to get in touch to learn more?
+          div.row
+            div.col-md-6 Send me an
+              +icon('envelope')
+              a(href='mailto:cory@corylucas.com') Email
+              .
+            div.col-md-6 Fork me on
+              +icon('github')
+              a(href='https://github.com/coryflucas/') Github
+              .
+            div.col-md-6 Connect on
+              +icon('linkedin')
+              a(href='http://www.linkedin.com/in/coryflucas') LinkedIn
+              .
+            div.col-md-6 View my
+              +icon('file-text')
+              a(href='resume.html') R&eacute;sum&eacute;
+              .

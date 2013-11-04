@@ -8,6 +8,8 @@ var path = require('path');
 var fp = require('french-press');
 var gitTrigger = require('./lib/git-trigger');
 
+var routes = require('./routes');
+
 var app = express();
 
 // all environments
@@ -21,8 +23,8 @@ app.use(app.router);
 app.use('/blog/', fp.blog(
     {
         postsDir: __dirname + '/posts',
-        listTemplate: 'blogListTemplate',
-        postTemplate: 'blogPostTemplate'
+        listTemplate: 'layouts/blogList',
+        postTemplate: 'layouts/blogPost'
     }));
 app.use('/git-wh', gitTrigger.hook(
     {
@@ -31,9 +33,12 @@ app.use('/git-wh', gitTrigger.hook(
     }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', routes.about);
+
 // development only
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
+    app.locals.pretty = true;
 }
 
 var request = require('request');

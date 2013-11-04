@@ -52,3 +52,8 @@ p.date {
     text-shadow: 1px 1px 0px #f8f8f8,
         3px 3px 1px rgba(0, 0, 0, .2);
 }
+
+div.about {
+    font-size: 14pt;
+    text-align: center;
+}

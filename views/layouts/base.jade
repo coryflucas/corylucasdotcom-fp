@@ -1,3 +1,8 @@
+mixin icon(iconName)
+    &nbsp;
+    i(class=['fa', 'fa-' + iconName])
+    &nbsp;
+
 doctype 5
 html
   head
@@ -28,17 +33,17 @@ html
           div(class=['collapse', 'navbar-collapse', 'navbar-ex1-collapse'])
             ul(class=['nav', 'navbar-nav', 'navbar-right'])
               li(class=(activeSection=='about')?'active':'')
-                a(href='/index.html')
-                  i(class=['fa', 'fa-fw', 'fa-male'])
-                  span About
+                a(href='/')
+                  +icon('male')
+                  span &nbsp;About
               li(class=(activeSection=='blog')?'active':'')
                 a(href='/blog/')
-                  i(class=['fa', 'fa-fw', 'fa-book'])
-                  span Blog
+                  +icon('book')
+                  span &nbsp;Blog
               li(class=(activeSection=='resume')?'active':'')
                 a(href='/resume.html')
-                  i(class=['fa', 'fa-fw', 'fa-file-text'])
-                  span R&eacute;sum&eacute;
+                  +icon('file-text')
+                  span &nbsp;R&eacute;sum&eacute;
         block content
 
     div.footer
