@@ -9,6 +9,7 @@
     "express": "3.3.5",
     "jade": "*",
     "french-press": "~0.1.0",
-    "request": "~2.27.0"
+    "request": "~2.27.0",
+    "less-middleware": "~0.1.14"
   }
 }

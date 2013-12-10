@@ -14,37 +14,9 @@
 
 
     <style>
-        .jumbotron {
-            padding: 10px 50px;
-        }
-
-        .panel-heading {
-            font-size: 150%;
-            font-family: 'Arvo';
-        }
-
         .contact {
             white-space: nowrap;
             padding-left: 10px;
-        }
-
-        .print {
-            font-size: 4em;
-            position: fixed;
-            bottom: 75px;
-        }
-
-        .print a {
-            color: #333;
-        }
-
-        .print a:hover {
-            color: #2a6496;
-            text-decoration: none;
-        }
-
-        .col-sm-12 {
-            padding: 0;
         }
     </style>
 </head>
@@ -53,7 +25,7 @@
 <div class="container">
     <div class="grid">
         <div class="col-md-1 hidden-sm hidden-xs">
-            <div class="print hidden-print hidden-sm hidden-xs">
+            <div id="print" class="hidden-print hidden-sm hidden-xs">
                 <a title="Print" href="#" onclick="javascript:if(window.print)window.print()"><i class="fa fa-print"></i></a>
             </div>
         </div>

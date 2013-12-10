@@ -5,6 +5,7 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
+var less = require('less-middleware');
 var fp = require('french-press');
 var gitTrigger = require('./lib/git-trigger');
 
@@ -31,6 +32,10 @@ app.use('/git-wh', gitTrigger.hook(
         repoDir: __dirname,
         key: process.env.GIT_KEY || 'test_key'
     }));
+app.use(less({
+    src: path.join(__dirname, 'public'),
+    compress: true
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower', express.static(path.join(__dirname, 'bower_components')));
 
