@@ -1,0 +1,22 @@
+{
+  "name": "corylucasdotcom",
+  "version": "1.0.0",
+  "homepage": "www.corylucas.com",
+  "authors": [
+    "Cory Lucas <cory@corylucas.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "font-awesome": "~4.0.3",
+    "respond": "~1.4.1",
+    "html5shiv": "~3.7.0",
+    "highlightjs": "~7.5.0"
+  }
+}

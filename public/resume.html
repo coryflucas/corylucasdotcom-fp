@@ -3,19 +3,19 @@
 <head>
     <title>Cory Lucas DOT Com | R&eacute;sum&eacute;</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Arvo|Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="stylesheets/site.css">
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/font-awesome-ie7.min.css">
-    <link rel="stylesheet" href="stylesheets/bootstrap-ie7.css">
+    <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arvo|Roboto:400,700,400italic" type="text/css">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/bower/html5shiv/dist/html5shiv.js"></script>
+    <script type="text/javascript" src="/bower/respond/dest/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="/stylesheets/site.css">
+
 
     <style>
         .jumbotron {
             padding: 10px 50px;
-            text-align: right;
         }
 
         .panel-heading {
@@ -54,12 +54,12 @@
     <div class="grid">
         <div class="col-md-1 hidden-sm hidden-xs">
             <div class="print hidden-print hidden-sm hidden-xs">
-                <a title="Print" onclick="javascript:if(window.print)window.print()"><i class="fa fa-print"></i></a>
+                <a title="Print" href="#" onclick="javascript:if(window.print)window.print()"><i class="fa fa-print"></i></a>
             </div>
         </div>
 
         <div class="col-md-10 col-sm-12">
-            <div class="header jumbotron panel clearfix">
+            <div class="header jumbotron text-right">
                 <h1>Cory F. Lucas</h1>
 
                 <p>
@@ -73,7 +73,7 @@
                 <span class="contact hidden-print"><i class="fa fa-linkedin"></i> <a title="LinkedIn" href="http://www.linkedin.com/in/coryflucas">LinkedIn Profile</a></span>
             </div>
 
-            <div class="panel">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <i class="fa fa-home"></i> Summary
                 </div>
@@ -93,7 +93,7 @@
                     </p>
                 </div>
             </div>
-            <div class="panel">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <i class="fa fa-briefcase"></i> Experience
                 </div>
@@ -173,7 +173,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="panel">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <i class="fa fa-flask"></i> Education
                 </div>
@@ -190,7 +190,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="panel">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <i class="fa fa-cogs"></i> Skills
                 </div>
@@ -218,10 +218,9 @@
 <div class="footer">
     &copy; Cory Lucas 2013
 </div>
-<script src="javascripts/jquery-1.10.2.min.js"></script>
-<script src="javascripts/bootstrap.min.js"></script>
-<script src="javascripts/respond.min.js"></script>
-<script src="javascripts/analytics.js"></script>
+<script type="text/javascript" src="/bower/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/bower/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="javascripts/analytics.js"></script>
 
 </body>
 </html>
